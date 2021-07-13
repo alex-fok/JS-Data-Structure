@@ -11,7 +11,7 @@ const MinHeap = {
     heap.push(this.createNode(key, value));
     let current = heap.length - 1;
     while (current !== 1) {
-      const parent = Math.floor(current/2);
+      const parent = Math.floor(current >> 1);
       if (heap[current].priority < heap[parent].priority) {
         [heap[current], heap[parent]] = [heap[parent], heap[current]];
         current = parent;
